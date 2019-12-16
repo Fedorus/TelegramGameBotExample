@@ -51,6 +51,7 @@ namespace FantasticTelegramBot
             requestFilter.AllowedUpdates = new[] {UpdateType.Message, UpdateType.CallbackQuery, UpdateType.InlineQuery};
 
             await manager.RunAsync();
+            
         }
 
         private static IBotBuilder ConfigureBot()

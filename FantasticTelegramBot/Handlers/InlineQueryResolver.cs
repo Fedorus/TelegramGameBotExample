@@ -17,7 +17,7 @@ namespace FantasticTelegramBot.Handlers
             await context.Bot.Client.AnswerInlineQueryAsync(context.Update.InlineQuery.Id,
                 new InlineQueryResultBase[1]
                 {
-                    new InlineQueryResultArticle("Profile", "Profile", new InputTextMessageContent("Just an example"))
+                    new InlineQueryResultArticle("Profile", "Profile", new InputTextMessageContent("User name: "+game.User.GameProfile.Name))
                 }, cancellationToken: cancellationToken);
         }
     }

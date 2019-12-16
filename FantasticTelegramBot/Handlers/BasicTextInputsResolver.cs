@@ -19,6 +19,7 @@ namespace FantasticTelegramBot.Handlers
             {
                 game.User.GameProfile.GameState = 0;
                 game.User.GameProfile.Name = context.Update.Message.Text;
+                await context.Bot.Client.SendTextMessageAsync(context.Update.Message.From.Id, "Your new Name: "+game.User.GameProfile.Name, cancellationToken: cancellationToken);
             }
         }
     }
